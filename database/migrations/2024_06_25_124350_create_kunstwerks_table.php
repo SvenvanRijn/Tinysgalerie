@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('afbeelding_path');
             $table->unsignedBigInteger('kunstenaar_id');
             $table->foreign('kunstenaar_id')->references('id')->on('kunstenaars');
-            $table->int('prijs');
+            $table->integer('prijs');
             $table->date('datum');
             $table->string('locatie');
             $table->string('dimensies');
