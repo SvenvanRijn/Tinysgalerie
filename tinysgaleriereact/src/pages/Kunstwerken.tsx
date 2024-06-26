@@ -16,7 +16,7 @@ export default function Kunstwerken() {
     }, []);
 
     const elements = kunstwerken.map((kunstwerk: any) => (
-        <Card key={kunstwerk.id} kunstwerk={kunstwerk} />
+        <Card key={kunstwerk.id} img={kunstwerk.afbeelding_path} title={kunstwerk.naam} omschrijving={kunstwerk.omschrijving} />
     ));
     return (
         <>

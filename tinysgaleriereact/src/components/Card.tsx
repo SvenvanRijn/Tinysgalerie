@@ -1,18 +1,17 @@
 export default function Card(props: any) {
 
-    console.log(props);
 
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
             <img
                 className="w-full"
-                src="https://via.placeholder.com/400x200" //props.kunstwerk.afbeelding_path
-                alt={props.kunstwerk.naam}
+                src="https://via.placeholder.com/400x200" //props.img
+                alt={props.title}
             />
             <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{props.kunstwerk.naam}</div>
+                <div className="font-bold text-xl mb-2">{props.title}</div>
                 <p className="text-gray-700 text-base">
-                    {props.kunstwerk.omschrijving}
+                    {props.omschrijving}
                 </p>
             </div>
             <div className="px-6 pt-4 pb-2">
