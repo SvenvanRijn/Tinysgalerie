@@ -1,17 +1,22 @@
-export default function Card(props: any) {
+interface Props {
+    img: string;
+    title: string;
+    omschrijving: string;
+}
 
+export default function Card({ img, title, omschrijving}: Props) {
 
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
             <img
                 className="w-full"
-                src="https://via.placeholder.com/400x200" //props.img
-                alt={props.title}
-            />
+                src="https://via.placeholder.com/400x200" // TODO: Replace with actual {img}
+                alt={title}
+            />{img}
             <div className="px-6 py-4">
-                <div className="font-bold text-xl mb-2">{props.title}</div>
+                <div className="font-bold text-xl mb-2">{title}</div>
                 <p className="text-gray-700 text-base">
-                    {props.omschrijving}
+                    {omschrijving}
                 </p>
             </div>
             <div className="px-6 pt-4 pb-2">
