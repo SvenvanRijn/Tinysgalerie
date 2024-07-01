@@ -1,10 +1,10 @@
 interface Props {
-    img: string;
-    title: string;
-    omschrijving: string;
+    img?: string;
+    title?: string;
+    omschrijving?: string;
 }
 
-export default function Card({ img, title, omschrijving}: Props) {
+export default function Card({ img = 'https://via.placeholder.com/400x200', title = 'No Title', omschrijving = ''}: Props) {
 
     return (
         <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
