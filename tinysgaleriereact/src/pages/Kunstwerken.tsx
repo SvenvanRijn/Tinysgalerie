@@ -1,10 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect} from "react";
+import {  useParams } from "react-router-dom";
 import axios from "axios";
 import Card from "../components/Card";
 import Grid from "../components/Grid";
 
 export default function Kunstwerken() {
     const [kunstwerken, setKunstwerken] = useState([]);
+    const {id} = useParams();
 
     useEffect(() => {
         axios
@@ -27,6 +29,15 @@ export default function Kunstwerken() {
     ));
     return (
         <>
+            <h1>Kunstwerken</h1>
+            <h2>Onze kunstwerken</h2>
+            <p>Deze zijn onze kunstwerken.</p>
+            <p>Deze zijn onze kunstwerken.</p>
+            <p>Deze zijn onze kunstwerken.</p>
+            <p>Deze zijn onze kunstwerken.</p>
+            <p>Deze zijn onze kunstwerken.</p>
+            <p>Deze zijn onze kunstwerken.</p>
+            {id}
             <Grid children={elements} />
         </>
     );
