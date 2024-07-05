@@ -29,14 +29,6 @@ export default function Kunstwerken() {
     ));
     return (
         <>
-            <h1>Kunstwerken</h1>
-            <h2>Onze kunstwerken</h2>
-            <p>Deze zijn onze kunstwerken.</p>
-            <p>Deze zijn onze kunstwerken.</p>
-            <p>Deze zijn onze kunstwerken.</p>
-            <p>Deze zijn onze kunstwerken.</p>
-            <p>Deze zijn onze kunstwerken.</p>
-            <p>Deze zijn onze kunstwerken.</p>
             {id}
             <Grid children={elements} />
         </>
