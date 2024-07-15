@@ -34,6 +34,15 @@ export default function NavMenu() {
                 </li>
                 <li>
                     <Link
+                        to="/form"
+                        className={linkClassName}
+                        onClick={closeMenuOnMobile}
+                    >
+                        Form
+                    </Link>
+                </li>
+                <li>
+                    <Link
                         to="/kunstenaars"
                         className={linkClassName}
                         onClick={closeMenuOnMobile}

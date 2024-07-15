@@ -6,6 +6,7 @@ import Kunstwerken from './pages/Kunstwerken';
 import Kunstenaars from './pages/Kunstenaars';
 import './App.css'
 import { HelmetProvider } from "react-helmet-async";
+import FormPage from "./pages/FormPage";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
                 <Route path="/" element={<Layout />}>
                     <Route index element={<Home />} />
                     <Route path="kunstwerken" element={<Kunstwerken />} />
+                    <Route path="form" element={<FormPage />} />
                     <Route path="kunstwerken/:id" element={<Kunstwerken />} />
                     <Route path="kunstenaars" element={<Kunstenaars />} />
                 </Route>
