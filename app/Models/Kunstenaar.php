@@ -21,4 +21,13 @@ class Kunstenaar extends Model
     {
         return $this->hasMany(Kunstwerk::class);
     }
+
+    public function getSlug(){
+        return strtolower(str_replace('/\s+/', '-', $this->naam));
+    }
+
+    public function save(array $options = []){
+        $this->slug = $this->getSlug();
+        parent::save($options);
+    }
 }

@@ -9,6 +9,16 @@ class KunstenaarController extends Controller
 {
 
 
+    public function allKunstenaars(){
+        $kunstenaars = Kunstenaar::all();
+        return response()->json($kunstenaars, 200);
+    }
+
+    public function singleKunstwerk($slug){
+        $kunstenaar = Kunstenaar::where('slug', $slug)->first();
+        return response()->json($kunstenaar, 200);
+    }
+
 
     /**
     * admin routes

@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('kunstwerken', function (Blueprint $table) {
             $table->id();
             $table->string('naam');
+            $table->string('slug');
             $table->string('omschrijving');
             $table->string('afbeelding_path');
             $table->unsignedBigInteger('kunstenaar_id');

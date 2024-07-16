@@ -3,7 +3,7 @@ import { IoClose, IoMenu } from "react-icons/io5";
 import { useState } from "react";
 import { useMediaQuery } from "react-responsive";
 
-interface Props {}
+
 
 export default function NavMenu() {
     const [showMenu, setShowMenu] = useState(false);

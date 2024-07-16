@@ -10,7 +10,7 @@ export default function Kunstwerken() {
 
     useEffect(() => {
         axios
-            .get("http://tinysgalerie.test/api/kunstwerken")
+            .get("http://tinysgalerie.test/api/kunstwerken/")
             .then((response) => {
                 setKunstwerken(response.data);
             })
@@ -24,6 +24,7 @@ export default function Kunstwerken() {
             key={kunstwerk.id}
             img={kunstwerk.afbeelding_path}
             title={kunstwerk.naam}
+            slug={kunstwerk.slug}
             omschrijving={kunstwerk.omschrijving}
         />
     ));

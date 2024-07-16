@@ -23,6 +23,15 @@ class Kunstwerk extends Model
 
     public function kunstenaar()
     {
-        return $this->belongsTo(Kunstenaar::class)->first();
+        return $this->belongsTo(Kunstenaar::class);
+    }
+
+    public function getSlug(){
+        return strtolower(str_replace('/\s+/', '-', $this->naam));
+    }
+
+    public function save(array $options = []){
+        $this->slug = $this->getSlug();
+        parent::save($options);
     }
 }

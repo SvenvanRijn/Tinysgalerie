@@ -15,6 +15,10 @@ Route::get('/', function () {
 });
 Route::prefix('api')->group(function () {
     Route::get('/kunstwerken', [KunstwerkController::class, 'allKunstwerken']);
+    Route::get('/kunstwerken/{slug}', [KunstwerkController::class, 'singleKunstwerk']);
+
+    Route::get('/kunstenaars', [KunstenaarController::class, 'allKunstenaars']);
+    Route::get('/kunstenaars/{slug}', [KunstenaarController::class, 'singleKunstenaar']);
 });
 
 Route::group(['middleware' => 'web'], function () {

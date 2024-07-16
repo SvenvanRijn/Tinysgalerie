@@ -14,6 +14,11 @@ class KunstwerkController extends Controller
         return response()->json($kunstwerken, 200);
     }
 
+    public function singleKunstwerk($slug){
+        $kunstwerk = Kunstwerk::with(['kunstenaar:id,naam,email,website,slug'])->where('slug', $slug)->first();
+        return response()->json($kunstwerk, 200);
+    }
+
     /**
     * admin routes
     */

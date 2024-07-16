@@ -1,13 +1,16 @@
+import { Link } from "react-router-dom";
+
 interface Props {
     img?: string;
     title?: string;
+    slug?: string;
     omschrijving?: string;
 }
 
-export default function Card({ img = 'https://via.placeholder.com/400x200', title = 'No Title', omschrijving = ''}: Props) {
+export default function Card({ img = 'https://via.placeholder.com/400x200', title = 'No Title', slug = '', omschrijving = ''}: Props) {
 
     return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
+        <Link to={`/kunstwerken/${slug}`} className="max-w-sm rounded overflow-hidden shadow-lg bg-white">
             <img
                 className="w-full"
                 src="https://via.placeholder.com/400x200" // TODO: Replace with actual {img}
@@ -30,6 +33,6 @@ export default function Card({ img = 'https://via.placeholder.com/400x200', titl
                     #tag3
                 </span>
             </div>
-        </div>
+        </Link>
     );
 }

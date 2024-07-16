@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('kunstenaars', function (Blueprint $table) {
             $table->id();
             $table->string('naam');
+            $table->string('slug');
             $table->string('email')->unique();
             $table->string('rol');
             $table->integer('marge')->default(40);
